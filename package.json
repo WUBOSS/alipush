@@ -1,0 +1,47 @@
+{
+  "name": "apicloud-polyfill-sample",
+  "version": "0.0.1",
+  "description": "apicloud-polyfill,以模块化方式开发 APICloud App!",
+  "main": "index.js",
+  "repository": "http://www.apicloud.com",
+  "scripts": {
+    "webpack": "webpack",
+    "startSync": "apicloud wifiStart --port 8689",
+    "stopSync": "apicloud wifiStop --port 8689",
+    "sync": "apicloud wifiSync  --project ./ --updateAll false --port 8689",
+    "bundle": "webpack --color --progress",
+    "bundle_s": "webpack --color --progress && apicloud wifiSync --project ./ --updateAll false --port 8689",
+    "bundle_d": "webpack -d --color --progress",
+    "bundle_d_s": "webpack -d --color --progress && apicloud wifiSync --project ./ --updateAll false --port 8689",
+    "wifiinfo": "apicloud wifiInfo --port 8689",
+    "wifilog": "apicloud wifiLog --port 8689"
+  },
+  "author": "APICloud",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-runtime": "^6.0.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-latest": "^6.16.0",
+    "css-loader": "^0.28.8",
+    "file-loader": "^0.11.1",
+    "glob": "^7.1.1",
+    "mockjs": "^1.0.1-beta3",
+    "querystring": "^0.2.0",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.8",
+    "vue-html-loader": "^1.0.0",
+    "vue-loader": "^12.1.0",
+    "vue-style-loader": "^3.0.1",
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "^1.13.3"
+  },
+  "dependencies": {
+    "axios": "^0.16.1",
+    "mint-ui": "^2.2.13",
+    "vue": "^2.5.13",
+    "vue-m-touch": "^0.2.3"
+  }
+}
